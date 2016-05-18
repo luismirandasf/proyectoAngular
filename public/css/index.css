@@ -1,0 +1,14 @@
+/* Footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+  /*background-color: #317AC5;*/
+  background-image: url(http://www.kucuu.com/desktop-wallpaper-home/Aurora-Borealis-Lake-Silhouette-Wallpaper-1280x1024.jpg);
+}
+
+
