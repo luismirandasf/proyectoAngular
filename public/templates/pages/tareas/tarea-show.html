@@ -1,0 +1,31 @@
+
+<div class="container well edicion_tareas">
+  <h3 class="hidden viejo_titulo"><i>Antiguo Titulo:</i></h3>
+	<h1 class="titulo">{{tareaShowCtrl.tarea.titulo}}</h1>
+  
+	<p>Creado por: {{tareaShowCtrl.tarea.usuario}} <i> Email: {{tareaShowCtrl.tarea.email}}</i></p>
+	<h3>Descripción:</h3>
+  <h5 class="hidden vieja_descripcion"><i>Antigua descripción:</i></h5>
+	<p class="descripcion">{{tareaShowCtrl.tarea.tarea}}</p>
+  
+	<button type="submit" class="button-edit btn btn-success" id="edit-button"ng-click="tareaShowCtrl.mostrar()">Editar</button>  
+  <button class="button-edit btn btn-primary" id="cancel-button" ng-click="tareaShowCtrl.atras()">Atras</button>
+</div>
+
+
+<div class="container well hidden edicion">
+<form name="reviewForm" ng-submit="reviewForm.$valid && tareaShowCtrl.editar()" ng-submit="tareaShowCtrl.editar()">
+  <div class="form-group">
+    <label >Titulo</label>
+    <input type="text" class="form-control" ng-model="tareaShowCtrl.tarea.titulo" placeholder="Titulo" required>
+  </div>
+  <div class="form-group">
+    <label >Descripción</label>
+    <input type="text" class="form-control" ng-model="tareaShowCtrl.tarea.tarea" placeholder="Escribe para editar..." required>
+  </div>
+  <button class="col-xs-4  col-sm-3 col-md-2 btn btn-success" type="Submit" id="edit-button">Editar</button>
+</form>
+  <button class="col-xs-4 col-xs-offset-1 col-xs-3 col-md-2 btn btn-danger" id="cancel-button" ng-click="tareaShowCtrl.cancelar()">Cancelar</button>
+
+</div>
+
