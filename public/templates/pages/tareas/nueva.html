@@ -1,0 +1,28 @@
+<!-- Copiar entera -->
+<div class="container well">
+  <h2>Añade una tarea</h2>
+  <p ng-if="createController.errors"> {{tareaNuevaCtrl.errors}} </p>
+  <form class="form" role="form" name="reviewForm" ng-submit="reviewForm.$valid && tareaNuevaCtrl.guardaNuevatarea()" ng-submit="tareaNuevaCtrl.guardaNuevatarea()">
+    <div class="form-inline" role="form">
+      <div class="form-group">
+        <label class="form-label" for="title">Título:</label>
+        <input ng-focus="tareaNuevaCtrl.cambiarBoton()" class="form-input form-control borrar" name="title" ng-model="tareaNuevaCtrl.tarea.titulo" required/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="usuario">Autor:</label>
+        <input ng-focus="tareaNuevaCtrl.cambiarBoton()" class="form-input form-control borrar" name="usuario" ng-model="tareaNuevaCtrl.tarea.usuario" required/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email del usuario:</label>
+        <input ng-focus="tareaNuevaCtrl.cambiarBoton()" class="form-input form-control borrar" name="email"  type="email"  ng-model="tareaNuevaCtrl.tarea.email" required/>
+      </div>
+    </div>
+    <label class="form-label" for="description">Descripción</label>
+    <div class="form-group">
+      <textarea ng-focus="tareaNuevaCtrl.cambiarBoton()" class="form-input form-control borrar" name="description" ng-model="tareaNuevaCtrl.tarea.tarea" placeholder="Escribe la descripción" required></textarea> 
+    </div>
+    <button class="col-xs-6 col-sm-3 col-md-2 btn btn-danger" type="Submit">Crear Tarea</button>
+  </form>
+  <button style="margin-left: 2%;"class="col-xs-offset-0 btn btn-default btn" id="atras-button" ng-click="tareaNuevaCtrl.atras()">Atrás</button>
+
+</div>

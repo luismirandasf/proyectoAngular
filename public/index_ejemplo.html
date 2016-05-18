@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="NotasApp">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Notas app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/application.css" />
+  </head>
+
+  <body>
+    <div class="nav-wrapper has-dropdown">
+      <div class="nav-content">
+        <div class="wrapper">
+          <div class="nav-content-layout">
+            <div class="nav-list">
+              <a href="/#/notas" class="list-item">Notas</a>
+              <a href="/#/usuarios" class="list-item">Usuarios</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="main-wrapper">
+      <div ng-view></div>
+    </div>
+
+    <!-- Load Js libs -->
+    <script src="/js/librerias/jquery.js"></script>
+    <script src="/js/librerias/angular.js"></script>
+    <script src="/js/librerias/angular-route.js"></script>
+    
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+    
+    <script src="/js/app.js"></script>
+    <script src="/js/routes.js"></script>
+
+    <!-- Directives -->
+    <script src="/js/directives/na-elemento-nota.js"></script>
+
+    <!-- Services -->
+    <script src="/js/services/nota.js"></script>
+    
+    <script src="/js/services/gravatar.js"></script>
+
+    <!-- Resources -->
+    <script src="/js/librerias/angular-resource.js"></script>
+
+    <!-- Controllers -->
+    <script src="/js/controllers/notas-index-controller.js"></script>
+    <script src="/js/controllers/usuarios-index-controller.js"></script>
+    <script src="/js/controllers/nota-show-controller.js"></script>
+    <script src="/js/controllers/nota-nueva-controller.js"></script>
+
+    <!-- Filters -->
+
+  </body>
+</html>

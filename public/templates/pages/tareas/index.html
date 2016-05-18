@@ -1,0 +1,43 @@
+
+<div class="container well">
+  <h4>Filtrar contenido por: <input id="css-busqueda" ng-model="search.$"/> </h4>
+  <div>
+      <div class='row'>
+        <h2 id="Tareas" class='col-lg-10 col-md-10 col-sm-6 col-xs-4' title="Tareas">Tareas</h2>
+        <a class="col-lg-2 col-md-2 col-sm-1 col-md-offset-0 col-sm-offset-2 col-xs-offset-2" href='#/tareas/nueva'>
+          <button type="button" class="btn btn-primary btn-md">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Crear tarea
+          </button>
+        </a>
+      </div>
+      <div class='row well'>
+        
+        <div class="row">
+          <h3>Actuales</h3>
+          <div>
+            <p ng-repeat="tarea in tareasIndex.tareas | filter: {caducada: 'false'} | filter: {borrada: 'false'} | filter: search">
+            <na-elemento-tarea class="col-md-4" titulo="tarea.titulo" descripcion="tarea.tarea" fecha="tarea.fecha" caducada="tarea.caducada" id="tarea._id"  borrada="tarea.borrada" email="tarea.email" ><!-- ng-href="#/tareas/{{tarea._id}}" -->
+            <!--  -->
+            
+            <!--  -->
+            </na-elemento-tarea>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h3>Caducadas</h3>
+          <div>
+            <p ng-repeat="tarea in tareasIndex.tareas | filter: {caducada: 'true'} | filter: {borrada: 'false'} | filter: search">
+            <na-elemento-tarea class="col-md-4" titulo="tarea.titulo" descripcion="tarea.tarea" fecha="tarea.fecha" caducada="tarea.caducada" id="tarea._id" borrada="tarea.borrada" email="tarea.email">
+            <!--  -->
+            
+            <!--  -->
+            </na-elemento-tarea>
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
