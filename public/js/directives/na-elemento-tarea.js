@@ -51,10 +51,7 @@ angular.module('taskManagerApp')
         element.find(".informacion").toggleClass('hidden');
 
         });
-        /*$(".completedTaskBtn").on("click",function(){
-
-          console.log("HOLA");
-        });*/
+        
       }
     };
   });

@@ -10,18 +10,6 @@ angular.module('taskManagerApp')
     }
   });
   
-  /*this.eliminarNota = function() {
-    console.log(this.tarea);
-    var d = new Date(this.tarea.tarea);
-    console.log(d.getTime());
-    var controller = this;
-    controller.errors = null;
-    $scope.tarea.$save(this.tarea)/////////////resource
-    .catch(function(tarea) {
-      controller.errors = tarea.data.error;
-    })
-    this.tarea = {};
-  };
-*/
+  
 });
 

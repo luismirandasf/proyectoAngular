@@ -2,7 +2,6 @@
 // Dependencias: ngRoute y ngResource
 angular.module('taskManagerApp', ['ngRoute', 'ngResource']);
 
-
 // -------- Index.html -------
 // En el index.html ng-app="taskManagerApp"
 // Tambien tenemos que cargar <script src="/js/app.js"></script>

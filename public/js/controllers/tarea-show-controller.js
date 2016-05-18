@@ -6,10 +6,10 @@ angular.module('taskManagerApp')
   	controller.tarea = tarea.get({id:$routeParams.id}, function(){
   });
   
+  // funcionalidad de los botones
   this.atras = function() {
     $window.location.href="#/tareas/"; // Redireccion a tareas tras guardar la tarea
   }; 
-
 
   var viejo_titulo = "";
   var vieja_descripcion = "";

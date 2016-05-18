@@ -1,9 +1,9 @@
 
-
 angular.module('taskManagerApp')
 .controller('tareaNuevaController', function($scope, tarea, $window) {
   this.tarea = {};
   $scope.tarea = new tarea();//////////////resource
+  // guardar tarea en base de datos con $resource
   this.guardaNuevatarea = function() {
 
  
@@ -11,9 +11,10 @@ angular.module('taskManagerApp')
      $('#atras-button').addClass("btn-primary");
 
 
-    console.log(this.tarea);
+    /*console.log(this.tarea);*/
     var controller = this;
     controller.errors = null;
+
     $scope.tarea.$save(this.tarea).finally(function(tarea) {
       controller.errors = tarea.data.error;
       console.log("Hola");
@@ -21,6 +22,7 @@ angular.module('taskManagerApp')
     $(".borrar").val("");
   };
 
+  // funcionalidades
   this.cambiarBoton = function(){
       $('#atras-button').removeClass("btn-primary");
       $('#atras-button').addClass("btn-default");
