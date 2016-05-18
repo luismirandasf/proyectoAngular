@@ -102,10 +102,42 @@ app.post('/tareas', function(request, response){
   //response.json(notas);
   console.log(request.query);
 
+  if (request.query.caducada != undefined){
 
+    console.log("El _id vale: "+parseInt(request.query._id))
+
+    Tarea.findByIdAndUpdate(request.query._id, {caducada: true}, function (err, tank) {
+      //if (err) return handleError(err);
+      //res.send(tank);
+      console.log("entrada actualizada");
+    });
+    /*Tarea.update({_id: request.query._id},{caducada:true},function(err, NumAffected){
+      console.log("tarea actualizada");
+    });*/
+    
+  }else if (request.query.borrar != undefined){
+
+    console.log("Estamos en borrar una nota");
+
+    console.log("id de la tarea a borrar "+request.query._id);
+
+    Tarea.remove({_id: request.query._id},function(err, NumAffected){
+      console.log("tarea eliminada");
+
+      Tarea.find({email:request.query.email}, function(err,docs){
+        console.log(docs.length);
+        if (docs.length == 0){
+
+          Usuarios.remove({email: request.query.email},function(err, NumAffected){
+            console.log("Se ha eliminado también al usuario por no tener tareas pendientes");
+          });
+        };
+      });
+    });
+  }else{
 
     guardarTareaDB(request.query);
-  
+  }
   
 });
 
