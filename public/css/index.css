@@ -1,0 +1,48 @@
+/* Footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+  /*background-color: #317AC5;*/
+  background-image: url(http://www.kucuu.com/desktop-wallpaper-home/Aurora-Borealis-Lake-Silhouette-Wallpaper-1280x1024.jpg);
+}
+.css-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 100px;
+  background-color: #595959;
+  color: #fff;
+}
+.css-footer-page{
+  background-color: #595959;
+}
+#css-remark {
+  color:  #ff6666;
+}
+#css-elemento{
+    border: 2px solid #a1a1a1;
+    border-radius: 5px;
+    background: #FFE4C0;
+    padding: 0px 16px 8px 8px;
+}
+
+#css-perfil{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#css-busqueda{
+    width: 20%;
+    border-radius: 7px;
+}
+
+.viejo_titulo, .vieja_descripcion{
+    color: #C3C3C3;
+}
+
